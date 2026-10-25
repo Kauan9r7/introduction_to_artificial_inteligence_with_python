@@ -1,0 +1,58 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+build/
+dist/
+eggs/
+*.egg-info/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*-checkpoint.py
+*.ipynb_metadata/
+
+# Environment variables & secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Editor & IDE configurations
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Logs & Monitoring
+*.log
+logs/
+wandb/
+mlruns/
+
+# Large Datasets and AI Model weights
+data/
+models/
+checkpoints/
+*.pt
+*.pth
+*.onnx
+*.safetensors
+*.bin
+*.h5

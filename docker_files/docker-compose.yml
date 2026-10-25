@@ -1,0 +1,27 @@
+services:
+  ai-dev:
+    build:
+      context: ..
+      dockerfile: docker_files/Dockerfile
+    container_name: ai_dev_env
+    working_dir: /workspace
+    volumes:
+      - ..:/workspace
+    ports:
+      - "8888:8888"
+      - "5000:5000"
+    stdin_open: true
+    tty: true
+    command: jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root
+
+  qdrant:
+    image: qdrant/qdrant:v1.12.5
+    container_name: qdrant_storage
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - qdrant_data:/qdrant/storage
+
+volumes:
+  qdrant_data:
